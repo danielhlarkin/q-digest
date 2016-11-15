@@ -251,7 +251,7 @@ class QDigest {
    */
   void _insert(size_t key, unsigned int count, bool try_compact) {
     if (key > this->root->ub) {
-      size_t new_ub_plus_one = 1 << log2Ceil(key);
+      size_t new_ub_plus_one = ((size_t)1) << log2Ceil(key);
       if (this->root->ub + 1 == new_ub_plus_one) {
         new_ub_plus_one *= 2;
       }
