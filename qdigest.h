@@ -37,7 +37,7 @@ struct QDigestNode {
   ~QDigestNode();
 };
 
-std::ostream &operator<<(std::ostream &out, QDigestNode const &n);
+extern std::ostream &operator<<(std::ostream &out, QDigestNode const &n);
 
 class QDigest {
   // A QDigest can NOT be copied

@@ -23,7 +23,7 @@ QDigestNode::~QDigestNode() {
   this->parent = nullptr;
 }
 
-std::ostream &operator<<(std::ostream &out, QDigestNode const &n) {
+std::ostream &qdigest::operator<<(std::ostream &out, QDigestNode const &n) {
   out << "[" << n.lb << ".." << n.ub << "], count -> " << n.count;
   return out;
 }
