@@ -27,7 +27,7 @@
 
 namespace qdigest {
 
-size_t log2Ceil(size_t n);
+extern size_t log2Ceil(size_t n);
 
 struct QDigestNode {
   QDigestNode *left, *right, *parent;
@@ -174,7 +174,7 @@ public:
   void printTree(std::ostream &out) const;
 };
 
-std::ostream &operator<<(std::ostream &out, QDigest const &digest);
+extern std::ostream &operator<<(std::ostream &out, QDigest const &digest);
 
 } // namespace qdigest
 
