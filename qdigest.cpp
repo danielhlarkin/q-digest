@@ -2,7 +2,7 @@
 
 using namespace qdigest;
 
-size_t log2Ceil(size_t n) {
+size_t qdigest::log2Ceil(size_t n) {
   bool is_pow2 = (n & -n) == n;
   int ret = 0;
   while (n > 1) {
@@ -340,7 +340,7 @@ void QDigest::printTree(std::ostream &out) const {
   this->printTree(out, this->root.get());
 }
 
-std::ostream &operator<<(std::ostream &out, QDigest const &digest) {
+std::ostream &qdigest::operator<<(std::ostream &out, QDigest const &digest) {
   digest.printTree(out);
   return out;
 }
